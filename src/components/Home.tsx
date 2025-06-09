@@ -9,7 +9,7 @@ export default function Home() {
         <div className="home-container">
             <h1>
                 {user
-                    ? `Welcome back, ${user}!`
+                    ? `Welcome , ${user}!`
                     : 'Welcome to the Matchmaking Platform for ERIH Members'}
             </h1>
 
