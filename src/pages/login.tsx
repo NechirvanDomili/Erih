@@ -1,19 +1,23 @@
 import { useState, type FormEvent } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import './Login.css';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+    const { login } = useAuth();
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        console.log('Email:', email, 'Password:', password);
+        const username = email.split('@')[0]; // Einfacher Platzhalter
+        login(username);
+        navigate('/');
     };
 
     return (
         <div className="erih-page">
-
-
             <main className="erih-login-container">
                 <form className="erih-login-form" onSubmit={handleSubmit}>
                     <h2>Login</h2>

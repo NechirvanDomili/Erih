@@ -1,0 +1,16 @@
+.erih-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(92, 104, 109);
+    
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.footer-content p {
+    margin: 0.3rem 0;
+}

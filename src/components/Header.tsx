@@ -1,8 +1,17 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/erih-logo.png';
 import './Header.css';
+import { useAuth } from '../context/AuthContext';
 
 export default function Header() {
+    const { user, logout } = useAuth();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        logout();
+        navigate('/');
+    };
+
     return (
         <header className="erih-header">
             <div className="erih-left">
@@ -11,12 +20,22 @@ export default function Header() {
             </div>
             <nav className="erih-nav">
                 <Link to="/">Home</Link>
-                <Link to="/about">About ERIH</Link>
-                <Link to="/projects">Projects</Link>
-                <Link to="/news">News & Events</Link>
-                <Link to="/login">Login</Link>
+
+
+                {user ? (
+                    <>
+                        <span style={{ marginLeft: '1rem' }}>Welcome, {user}</span>
+                        <button onClick={handleLogout} style={{ marginLeft: '1rem' }}>
+                            Logout
+                        </button>
+                    </>
+                ) : (
+                    <>
+                        <Link to="/login">Login</Link>
+                        <Link to="/contacts">My Contacts</Link> {/* NEU */}
+                    </>
+                )}
             </nav>
         </header>
     );
 }
-import './Header.css';
