@@ -99,8 +99,6 @@
     color: green;
     margin-bottom: 10px;
     font-size: 14px;
-<<<<<<< HEAD
-=======
 }
 
 .profile-form select {
@@ -117,5 +115,4 @@
 .profile-form select:focus {
     border-color: #e44d26;
     outline: none;
->>>>>>> restore-changes
 }

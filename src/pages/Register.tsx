@@ -4,16 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const Register: React.FC = () => {
-<<<<<<< HEAD
-  const [form, setForm] = useState({ name: '', email: '', password: '' });
-=======
   const [form, setForm] = useState({
     firstName: '',
     name: '',
     email: '',
     password: '',
   });
->>>>>>> restore-changes
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
   const { login } = useAuth();
@@ -26,31 +22,17 @@ const Register: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-<<<<<<< HEAD
-    if (!form.name || !form.email || !form.password) {
-      setError('Please fill out all fields.');
-      return;
-    }
-
-    // Kein echter Server — wir simulieren Erfolg:
-    login(form.name); // Benutzer direkt einloggen
-=======
     if (!form.firstName || !form.name || !form.email || !form.password) {
       setError('Please fill out all required fields.');
       return;
     }
 
     login(`${form.firstName} ${form.name}`); // Nutzername als "Vorname Nachname"
->>>>>>> restore-changes
     setSuccess('Registration successful!');
     setError('');
 
     setTimeout(() => {
-<<<<<<< HEAD
-      navigate('/'); // zur Startseite
-=======
       navigate('/');
->>>>>>> restore-changes
     }, 1000);
   };
 
@@ -61,10 +43,6 @@ const Register: React.FC = () => {
 
         <input
           type="text"
-<<<<<<< HEAD
-          name="name"
-          placeholder="Name"
-=======
           name="firstName"
           placeholder="First Name"
           value={form.firstName}
@@ -76,15 +54,10 @@ const Register: React.FC = () => {
           type="text"
           name="name"
           placeholder="Last Name"
->>>>>>> restore-changes
           value={form.name}
           onChange={handleChange}
           className="register-input"
         />
-<<<<<<< HEAD
-=======
-
->>>>>>> restore-changes
         <input
           type="email"
           name="email"
@@ -93,10 +66,6 @@ const Register: React.FC = () => {
           onChange={handleChange}
           className="register-input"
         />
-<<<<<<< HEAD
-=======
-
->>>>>>> restore-changes
         <input
           type="password"
           name="password"
