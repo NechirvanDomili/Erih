@@ -99,4 +99,23 @@
     color: green;
     margin-bottom: 10px;
     font-size: 14px;
+<<<<<<< HEAD
+=======
+}
+
+.profile-form select {
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    background-color: white;
+}
+
+.profile-form select:focus {
+    border-color: #e44d26;
+    outline: none;
+>>>>>>> restore-changes
 }

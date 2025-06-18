@@ -7,27 +7,11 @@ export default function Home() {
 
     return (
         <div className="home-container">
-            <h1>
-                {user
-                    ? `Welcome back, ${user}!`
-                    : 'Welcome to the Matchmaking Platform for ERIH Members'}
-            </h1>
-
-            {!user && (
-                <div className="button-group">
-                    <button onClick={() => navigate('/login')}>Login</button>
-                    <button onClick={() => navigate('/Register')}>Register</button>
-                </div>
-            )}
-
-            {user && (
-                <div className="button-group">
-                    <button onClick={() => navigate('/profile-form')}>Fill Matching Profile</button>
-                    <button onClick={() => navigate('/match')}>Find Partners</button>
-                    <button onClick={() => navigate('/contacts')}>My Contacts</button> {/* NEU */}
-                </div>
-            )}
-
+            <h1>Welcome to the Matchmaking Platform for ERIH Members</h1>
+            <div className="button-group">
+                <button onClick={() => navigate('/login')}>Login</button>
+                <button onClick={() => navigate('/register')}>Register</button>
+            </div>
         </div>
     );
 }
