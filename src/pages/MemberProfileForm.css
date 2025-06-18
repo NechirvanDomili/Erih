@@ -1,0 +1,118 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 1rem;
+    min-height: calc(100vh - 80px);
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', sans-serif;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+.profile-form {
+    background-color: #ffffff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.profile-form h2 {
+    text-align: center;
+    color: #e44d26;
+    margin-bottom: 0.5rem;
+}
+
+.profile-form h3 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.25rem;
+}
+
+.profile-form label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    display: block;
+    color: #222;
+}
+
+.profile-form input,
+.profile-form textarea,
+.profile-form select {
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    background-color: white;
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus,
+.profile-form select:focus {
+    border-color: #e44d26;
+    outline: none;
+}
+
+.profile-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.profile-form button {
+    background-color: #e44d26;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-form button:hover {
+    background-color: #c53f1f;
+}
+
+.profile-form small {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: -0.4rem;
+    margin-bottom: 0.4rem;
+    display: block;
+}
+
+.form-message {
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+    background-color: #eaf8ea;
+    color: #226622;
+    border: 1px solid #b5e6b5;
+    margin-top: 0.5rem;
+}
+
+/* Zwei-Spalten-Gruppen */
+.row-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.row-group .half {
+    flex: 1 1 48%;
+    min-width: 250px;
+}

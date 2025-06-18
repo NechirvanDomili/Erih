@@ -8,6 +8,7 @@
     position: sticky;
     top: 0;
     z-index: 999;
+    min-width: 100wh;
 }
 
 .erih-left {
@@ -29,7 +30,7 @@
 .erih-nav a {
     margin: 0 0.5rem;
     text-decoration: none;
-    color: #e44d26;
+    color: #031c1d;
     font-weight: 500;
 }
 

@@ -1,0 +1,31 @@
+.contacts-container{
+    font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        min-height: 100vh;
+        min-width: 100vw;
+}
+.contact-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-left: 6px solid #e44d26;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-button {
+    background-color: #e44d26;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.message-button:hover {
+    background-color: #c53f1f;
+}
